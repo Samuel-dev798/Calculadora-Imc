@@ -19,10 +19,12 @@ class MainActivity : AppCompatActivity() {
         val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
         btnCalcular.setOnClickListener{
-            val peso = edtweight.text
-            val altura = edtheight.text
-
-            println(peso)
+            val weight: Float = edtweight.text.toString().toFloat()
+            val height: Float = edtheight.text.toString().toFloat()
+            // calculo imc
+            val height2 = height * height
+            val result = weight / height2
+            println(result)
         }
 
     }
